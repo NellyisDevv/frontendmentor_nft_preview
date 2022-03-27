@@ -1,112 +1,187 @@
+/* Here I set all of the default values of the page */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Outfit", sans-serif;
 }
+/* Here I set all of my colors I would use in the project */
 :root {
-  --Primary-one: hsl(215, 51%, 70%);
-  --Primary-two: hsl(178, 100%, 50%);
-  --Very-dark-blue-background: hsl(217, 54%, 11%); /*  (main BG) */
-  --Very-dark-blue-card: hsl(216, 50%, 16%); /* (card BG) */
-  --Very-dark-blue-line: hsl(215, 32%, 27%); /* (line) */
+  --Soft-blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --Very-dark-blue-main-background: hsl(217, 54%, 11%);
+  --Very-dark-blue-card-background: hsl(216, 50%, 16%);
+  --Very-dark-blue-line-background: hsl(215, 32%, 27%);
   --White: hsl(0, 0%, 100%);
 }
+/* Here is the background color of the page */
 body {
-  background-color: var(--Very-dark-blue-background);
+  background-color: var(--Very-dark-blue-main-background);
 }
-.nft-card {
+/* 
+The container is wrapped in a main tag. First, I gave the content
+a flex, then changed the flex-direction to a column to make the
+content appear vertically. Then I gave the background color for the
+qr card. The main has a max-width of 390px meaning it will stay this
+width even if the page is increased in size or decreased in size.
+The border-radius was used to give rounded borders to the background.
+and the margin top was used to move the container down a bit inside
+of the page */
+main {
   display: flex;
   flex-direction: column;
-  margin-top: 80px;
-}
-.nft-card-background {
-  background-color: var(--Very-dark-blue-card);
-  width: 40%;
-  padding: 20px;
+  background-color: var(--Very-dark-blue-card-background);
+  max-width: 390px;
+  border-radius: 1rem;
   margin: auto;
-  border-radius: 10px;
-}
-.nft-card-image {
-  flex: 1;
-}
-.nft-card-image img {
-  border-radius: 20px;
-}
-#nft-center {
-  margin: auto;
-  width: 100%;
-  display: block;
-  padding-bottom: 20px;
-}
-.nft-card-text {
-  flex: 1;
-}
-.nft-card-text h2 {
-  font-size: 1.8rem;
-  color: var(--White);
-  font-weight: 700;
-  padding-bottom: 15px;
-}
-.nft-card-text h3 {
-  font-size: 1.2rem;
-  color: var(--Primary-one);
-  font-weight: 300;
-}
-.nft-card-info {
-  flex: 1;
-}
-.nft-card-info ul {
-  display: flex;
-}
-.nft-card-info li,
-p {
-  display: inline;
-  padding: 20px;
-  text-align: center;
-  margin: auto;
-}
-#eth {
-  color: var(--Primary-two);
-  position: relative;
-  right: 50px;
+  margin-top: 10rem;
 }
 
-#clock {
-  color: var(--Primary-one);
-  position: relative;
-  left: 50px;
-}
-.nft-card-creation {
+.qr-image {
   flex: 1;
-  padding-top: 10px;
-}
-.nft-card-creation img {
-  height: 3vh;
-  border: 1px solid white;
-  border-radius: 50%;
-  position: relative;
-  top: 8px;
-}
-.nft-card-creation li,
-p {
-  display: inline;
-  padding: 10px;
-  text-align: center;
-  color: var(--Primary-one);
   margin: auto;
 }
+.qr-image:hover {
+}
+.qr-image img {
+  height: 23rem;
+  border-radius: 1rem;
+  padding-top: 1rem;
+}
+.qr-main-content h2 {
+  padding: 1rem 0.3rem 0rem 2rem;
+  font-size: 1.5rem;
+  color: var(--White);
+}
+.qr-main-content p {
+  padding: 0.8rem 1rem 0rem 2rem;
+  font-size: 1rem;
+  color: var(--Soft-blue);
+}
+.qr-eth-clock {
+  display: flex;
+  padding: 0.8rem 1rem 0rem 2rem;
+}
+#eth {
+  color: var(--Cyan);
+  padding: 0.5rem 9.5rem 1rem 0rem;
+}
+#clock {
+  color: var(--Soft-blue);
+  padding: 0.5rem 0rem 1rem 0rem;
+}
 hr {
-  height: 1px;
-  background-color: var(--Very-dark-blue-line);
-  border: none;
+  border: 1px solid var(--Very-dark-blue-line-background);
+  width: 90%;
+  margin: auto;
+  opacity: 50%;
+}
+.qr-creation {
+  padding: 1rem 1rem 1rem 2rem;
+}
+.qr-creation img {
+  height: 2.5rem;
+  border: 1px solid var(--White);
+  border-radius: 50%;
+}
+.qr-creation p {
+  font-size: 1rem;
+  color: var(--Soft-blue);
+}
+#centerp {
+  padding: 0rem 0rem 0rem 1rem;
+  position: relative;
+  bottom: 0.6rem;
+}
+#jules {
+  color: white;
 }
 .attribution {
-  margin-top: 200px;
+  margin-top: 5rem;
   font-size: 11px;
   text-align: center;
-  color: var(--Primary-one);
+  color: var(--Soft-blue);
 }
 .attribution a {
-  color: var(--Primary-two);
+  color: hsl(228, 45%, 44%);
+}
+@media only screen and (max-width: 834px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Very-dark-blue-card-background);
+    max-width: 300px;
+    border-radius: 1rem;
+    margin: auto;
+    margin-top: 10rem;
+  }
+  .qr-image {
+    flex: 1;
+    margin: auto;
+  }
+  .qr-image img {
+    height: 18rem;
+    border-radius: 1rem;
+    padding-top: 1rem;
+  }
+  .qr-main-content h2 {
+    padding: 1rem 0.3rem 0rem 2rem;
+    font-size: 1.2rem;
+    color: var(--White);
+  }
+  .qr-main-content p {
+    padding: 0.8rem 1rem 0rem 2rem;
+    font-size: 0.8rem;
+    color: var(--Soft-blue);
+  }
+  .qr-eth-clock {
+    display: flex;
+    padding: 0.8rem 1rem 0rem 2rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  #eth {
+    color: var(--Cyan);
+    padding: 0.5rem 6rem 1rem 0rem;
+  }
+  #eth-mobile {
+    position: relative;
+    bottom: 0.2rem;
+    padding: 0rem 0rem 0rem 0.2rem;
+  }
+  #clock {
+    color: var(--Soft-blue);
+    padding: 0.5rem 0rem 1rem 0rem;
+  }
+  #clock-mobile {
+    position: relative;
+    bottom: 0.2rem;
+    padding: 0rem 0rem 0rem 0.2rem;
+  }
+  hr {
+    border: 1px solid var(--Very-dark-blue-line-background);
+    width: 90%;
+    margin: auto;
+    opacity: 50%;
+  }
+  .qr-creation {
+    padding: 1rem 1rem 1rem 2rem;
+  }
+  .qr-creation img {
+    height: 2.5rem;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+  }
+  .qr-creation p {
+    font-size: 1rem;
+    color: var(--Soft-blue);
+  }
+  #centerp {
+    padding: 0rem 0rem 0rem 1rem;
+    position: relative;
+    bottom: 0.6rem;
+  }
+  #jules {
+    color: white;
+  }
 }

@@ -15,48 +15,52 @@
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css  " />
+    <link rel="stylesheet" href="style.css" />
     <title>Frontend Mentor | NFT preview card component</title>
   </head>
   <body>
-    <div class="nft-card">
-      <div class="nft-card-background">
-        <div class="nft-card-image">
-          <img id="nft-center" src="./images/image-equilibrium.jpg" alt="" />
-        </div>
-        <div class="nft-card-text">
-          <h2>Equilibrium #3429</h2>
-          <h3>
-            Our Equilibrium collection promotes <br />
-            balance and calm.
-          </h3>
-        </div>
-        <div class="nft-card-info">
-          <ul>
-            <li>
-              <img id="eth" src="./images/icon-ethereum.svg" alt="" />
-              <p id="eth">0.041 ETH</p>
-              <img id="clock" src="./images/icon-clock.svg" alt="" />
-              <p id="clock">3 days left</p>
-            </li>
-          </ul>
-        </div>
-        <hr />
-        <div class="nft-card-creation">
-          <ul>
-            <li>
-              <img src="./images/image-avatar.png" alt="" />
-              <p>Creation of Jules Wyvern</p>
-            </li>
-          </ul>
-        </div>
+    <main>
+      <div class="qr-image">
+        <img src="./images/image-equilibrium.jpg" alt="qr code component" />
       </div>
-    </div>
-    <div class="attribution">
-      Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
-        >Frontend Mentor</a
-      >. Coded by <a href="#">NellyisDevv</a>.
-    </div>
+      <div class="qr-main-content">
+        <h2>Equilibrium #3429</h2>
+        <p>
+          Our Equilibrium collection promotes <br />
+          balance and calm.
+        </p>
+      </div>
+      <div class="qr-eth-clock">
+        <p id="eth">
+          <img
+            class="eth"
+            src="./images/icon-ethereum.svg"
+            alt="ethereum icon"
+          />
+          <span id="eth-mobile">0.041 ETH</span>
+        </p>
+        <p id="clock">
+          <img class="clock" src="./images/icon-clock.svg" alt="clock icon" />
+          <span id="clock-mobile">3 days left</span>
+        </p>
+      </div>
+      <hr />
+      <div class="qr-creation">
+        <p>
+          <img src="./images/image-avatar.png" alt="" />
+          <span id="centerp"
+            >Creation of <span id="jules">Jules Wyvern</span></span
+          >
+        </p>
+      </div>
+    </main>
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">NellyisDev</a>.
+      </div>
+    </footer>
   </body>
 </html>
