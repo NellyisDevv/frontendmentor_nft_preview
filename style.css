@@ -3,7 +3,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: "Outfit", sans-serif;
+  font-family: 'Outfit', sans-serif;
 }
 /* Here I set all of my colors I would use in the project */
 :root {
@@ -36,7 +36,10 @@ main {
   margin: auto;
   margin-top: 10rem;
 }
-
+.qr-main-content h2:hover {
+  color: hsl(178, 100%, 50%);
+  cursor: pointer;
+}
 .qr-image {
   flex: 1;
   margin: auto;

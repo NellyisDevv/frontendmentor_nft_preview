@@ -113,5 +113,3 @@ https://stackoverflow.com/questions/7546389/css-overflow-only-1-line-of-text
 https://github.com/Headbwoi/fem-nft-card/blob/master/styles.css
 
 https://www.frontendmentor.io/profile/byronbyron
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
